@@ -12,4 +12,10 @@ public class GraduateStudent extends Student {
     public String getSpecialization() {
         return specialization;
     }
+
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", Specialization: " + specialization;
+    }
+
 }

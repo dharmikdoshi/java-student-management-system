@@ -12,4 +12,9 @@ public class Student extends Person {
     public String getCourse() {
         return course;
     }
+
+    @Override
+    public String getDetails() {
+        return "Student ID: " + getId() + ", Name: " + getName();
+    }
 }

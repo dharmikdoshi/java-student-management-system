@@ -56,6 +56,8 @@ com.airtribe.studentmanagement
 ## Requirements Checklist
 1. Package structure and access modifiers demonstrated using entity, service, util, and main packages
 2. Multilevel inheritance implemented using Person → Student → GraduateStudent
+3. Polymorphism demonstrated using method overloading and method overriding
+
 
 
 

@@ -23,4 +23,8 @@ public class Person {
     public String getEmail() {
         return email;
     }
+
+    public String getDetails() {
+        return "Person details";
+    }
 }

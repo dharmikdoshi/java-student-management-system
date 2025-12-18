@@ -47,11 +47,21 @@ public class StudentService {
     }
 
     public Student getStudentById(int id) {
-        for (Student student : students) {
-            if (student.getId() == id) {
-                return student;
+        for (Student s : students) {
+            if (s.getId() == id) {
+                return s;
             }
         }
         return null;
     }
+
+    public Student getStudentById(String email) {
+        for (Student s : students) {
+            if (s.getEmail().equals(email)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
 }
