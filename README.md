@@ -29,16 +29,22 @@ All the data is stored temporarily in memory and is available only while the pro
 The project is divided into packages to keep the code clean and organised:
 
 com.airtribe.studentmanagement
-├── Main.java
-├── entity
-│ ├── Person.java
-│ ├── Student.java
-│ ├── Course.java
-│ └── Enrollment.java
-└── service
-├── StudentService.java
-├── CourseService.java
-└── EnrollmentService.java
+|
+|-- Main.java
+|
+|-- entity
+|   |
+|   |-- Person.java
+|   |-- Student.java
+|   |-- Course.java
+|   |-- Enrollment.java
+|
+|-- service
+    |
+    |-- StudentService.java
+    |-- CourseService.java
+    |-- EnrollmentService.java
+
 
 ## How to Run the Project
 1. Java 21 installation required.
