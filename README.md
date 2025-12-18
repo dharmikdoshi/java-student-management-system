@@ -57,6 +57,8 @@ com.airtribe.studentmanagement
 1. Package structure and access modifiers demonstrated using entity, service, util, and main packages
 2. Multilevel inheritance implemented using Person → Student → GraduateStudent
 3. Polymorphism demonstrated using method overloading and method overriding
+4. Abstract classes & interfaces implementation
+5. 
 
 
 
