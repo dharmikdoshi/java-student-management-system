@@ -1,6 +1,8 @@
 package com.airtribe.studentmanagement.entity;
 
-public class Student extends Person {
+import com.airtribe.studentmanagement.util.Registrable;
+
+public class Student extends Person implements Registrable {
 
     private String course;
 
@@ -17,4 +19,15 @@ public class Student extends Person {
     public String getDetails() {
         return "Student ID: " + getId() + ", Name: " + getName();
     }
+
+    @Override
+    public String getRole() {
+        return "Student";
+    }
+
+    @Override
+    public String getRegistrationDetails() {
+        return "Student Registration ID: " + getId();
+    }
+
 }

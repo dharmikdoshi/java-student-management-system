@@ -1,6 +1,8 @@
 package com.airtribe.studentmanagement.entity;
 
-public class GraduateStudent extends Student {
+import com.airtribe.studentmanagement.util.Registrable;
+
+public class GraduateStudent extends Student implements Registrable {
 
     private String specialization;
 
@@ -16,6 +18,16 @@ public class GraduateStudent extends Student {
     @Override
     public String getDetails() {
         return super.getDetails() + ", Specialization: " + specialization;
+    }
+
+    @Override
+    public String getRole() {
+        return "Graduate Student";
+    }
+
+    @Override
+    public String getRegistrationDetails() {
+        return "Graduate Student Registration ID: " + getId();
     }
 
 }
