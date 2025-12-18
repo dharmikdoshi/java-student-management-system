@@ -6,13 +6,11 @@ import com.airtribe.studentmanagement.service.StudentService;
 import com.airtribe.studentmanagement.service.CourseService;
 import com.airtribe.studentmanagement.service.EnrollmentService;
 
-import java.util.Scanner;
+import com.airtribe.studentmanagement.util.InputUtil;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
 
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
@@ -29,26 +27,16 @@ public class Main {
             System.out.println("5. View Courses");
             System.out.println("6. View Enrollments");
             System.out.println("7. Exit");
-            System.out.print("Choose an option: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            int choice = InputUtil.readInt("Enter your choice: ");
 
             switch (choice) {
 
                 case 1:
-                    System.out.print("Enter Student ID: ");
-                    int studentId = scanner.nextInt();
-                    scanner.nextLine();
-
-                    System.out.print("Enter Name: ");
-                    String name = scanner.nextLine();
-
-                    System.out.print("Enter Email: ");
-                    String email = scanner.nextLine();
-
-                    System.out.print("Enter Course Name: ");
-                    String courseName = scanner.nextLine();
+                    int studentId = InputUtil.readInt("Enter Student ID: ");
+                    String name = InputUtil.readString("Enter Name: ");
+                    String email = InputUtil.readString("Enter Email: ");
+                    String courseName = InputUtil.readString("Enter Course Name: ");
 
                     Student student = new Student(studentId, name, email, courseName);
                     boolean added = studentService.addStudent(student);
@@ -59,12 +47,8 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("Enter Course ID: ");
-                    int courseId = scanner.nextInt();
-                    scanner.nextLine();
-
-                    System.out.print("Enter Course Name: ");
-                    String cName = scanner.nextLine();
+                    int courseId = InputUtil.readInt("Enter Course ID: ");
+                    String cName = InputUtil.readString("Enter Course Name: ");
 
                     Course course = new Course(courseId, cName);
                     boolean addedCourse = courseService.addCourse(course);
@@ -76,11 +60,8 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.print("Enter Student ID: ");
-                    int sId = scanner.nextInt();
-
-                    System.out.print("Enter Course ID: ");
-                    int cId = scanner.nextInt();
+                    int sId = InputUtil.readInt("Enter Student ID: ");
+                    int cId = InputUtil.readInt("Enter Course ID: ");
 
                     Student s = studentService.getStudentById(sId);
                     Course c = courseService.getCourseById(cId);
@@ -114,7 +95,5 @@ public class Main {
                     System.out.println("Invalid choice.");
             }
         }
-
-        scanner.close();
     }
 }

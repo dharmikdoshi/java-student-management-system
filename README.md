@@ -53,4 +53,9 @@ com.airtribe.studentmanagement
 4. Follow the menu options shown in the console.
 
 
+## Requirements Checklist
+1. Package structure and access modifiers demonstrated using entity, service, util, and main packages
+2. 
+
+
 
