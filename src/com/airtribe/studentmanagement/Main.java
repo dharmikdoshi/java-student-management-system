@@ -2,6 +2,7 @@ package com.airtribe.studentmanagement;
 
 import com.airtribe.studentmanagement.entity.Student;
 import com.airtribe.studentmanagement.entity.Course;
+import com.airtribe.studentmanagement.entity.GraduateStudent;
 import com.airtribe.studentmanagement.service.StudentService;
 import com.airtribe.studentmanagement.service.CourseService;
 import com.airtribe.studentmanagement.service.EnrollmentService;

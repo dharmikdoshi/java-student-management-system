@@ -6,6 +6,13 @@ public abstract class Person {
     private String name;
     private String email;
 
+    /*
+     * Default constructor
+     */
+    public Person() {
+        System.out.println("Person default constructor called");
+    }
+
     public Person(int id, String name, String email) {
         this.id = id;
         this.name = name;

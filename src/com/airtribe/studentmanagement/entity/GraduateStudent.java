@@ -6,6 +6,13 @@ public class GraduateStudent extends Student implements Registrable {
 
     private String specialization;
 
+    /*
+     * Default constructor
+     */
+    public GraduateStudent() {
+        this(0, "NA", "NA", "NA", "NA");
+    }
+
     public GraduateStudent(int id, String name, String email, String courseName, String specialization) {
         super(id, name, email, courseName);
         this.specialization = specialization;

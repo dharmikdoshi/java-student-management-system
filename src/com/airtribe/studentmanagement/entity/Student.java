@@ -6,6 +6,13 @@ public class Student extends Person implements Registrable {
 
     private String course;
 
+    /*
+     * Default constructor
+     */
+    public Student() {
+        this(0, "NA", "NA", "NA");
+    }
+
     public Student(int id, String name, String email, String course) {
         super(id, name, email);
         this.course = course;
